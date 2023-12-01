@@ -1,0 +1,222 @@
+:root {
+  --text-red: hsl(0, 100%, 67%);
+  --text-yellow: hsl(39, 100%, 56%);
+  --text-green: hsl(166, 100%, 37%);
+  --text-blue: hsl(234, 85%, 45%);
+
+  --red: hsl(0, 100%, 67%, 0.05);
+  --yellow: hsl(39, 100%, 56%, 0.05);
+  --green: hsl(166, 100%, 37%, 0.05);
+  --blue: hsl(234, 85%, 45%, 0.05);
+
+  --background-blue: hsl(241, 81%, 54%);
+  --purple: hsla(241, 72%, 46%, 0);
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  /* button */
+  --persian-blue: hsla(241, 72%, 46%, 0);
+  --royal-blue: hsl(241, 81%, 54%);
+  --slate-blue: hsl(252, 100%, 67%);
+
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --transparent-light-lavender: hsl(241, 100%, 89%, 0.5);
+
+  --dark-blue: hsl(224, 30%, 27%);
+  --transparent-dark-blue: hsl(224, 30%, 27%, 0.5);
+}
+@font-face {
+  font-family: "Hanken-Grotesk";
+  src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+html {
+  font-family: "Hanken-Grotesk";
+  color: var(--dark-blue);
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+#outer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 375px);
+  width: 750px;
+  border-radius: 25px;
+  box-shadow: 0px 10px 13px var(--pale-blue);
+  margin-top: 100px;
+  margin-bottom: 25px;
+}
+#outer * {
+  display: grid;
+  justify-items: center;
+}
+#blue {
+  background: linear-gradient(to top, var(--royal-blue), var(--slate-blue));
+  color: var(--pale-blue);
+  border-radius: 35px;
+}
+#sum {
+  font-weight: bold;
+  gap: 15px;
+}
+.items {
+  grid-template-columns: 20px 80px 80px 80px;
+  background: white;
+  border-radius: 10px;
+  padding: 0px 15px;
+  align-items: center;
+}
+.topic {
+  justify-self: start;
+  margin-left: 10px;
+}
+.points {
+  grid-column: 4;
+  color: var(--dark-blue);
+  grid-auto-flow: column;
+}
+h1 {
+  font-size: x-large;
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+h1.category,
+#scoreboard {
+  color: var(--light-lavender);
+}
+h2.category {
+  justify-self: start;
+  margin-left: 40px;
+}
+#your-score {
+  background: linear-gradient(
+    to bottom,
+    var(--violet-blue),
+    var(--persian-blue)
+  );
+  margin: 0px;
+  padding: 0px 60px;
+  border-radius: 50%;
+}
+#score,
+#total {
+  transform: translate(0px, 10px);
+}
+#score {
+  font-size: 75px;
+  margin: 40px 0px 0px;
+  padding: 0px 5px;
+}
+#total {
+  color: var(--transparent-light-lavender);
+  margin-top: 0px;
+  transform: translate(0px, -20px);
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-weight: bold;
+}
+h3 {
+  font-size: 30px;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  transform: translate(0px, 20px);
+}
+#scoreboard {
+  padding-bottom: 0px;
+  margin: 0px 55px;
+  text-align: center;
+}
+button {
+  border: none;
+  background: var(--dark-blue);
+
+  color: white;
+  font-size: 18px;
+
+  margin: 30px;
+  padding: 16px 100px;
+  border-radius: 35px;
+}
+button:active {
+  background: linear-gradient(to top, var(--royal-blue), var(--slate-blue));
+}
+p {
+  font-size: 18px;
+}
+.points span {
+  padding-left: 8px;
+  color: var(--transparent-dark-blue);
+}
+
+/*  */
+
+#reaction {
+  background: var(--red);
+  color: var(--text-red);
+}
+#memory {
+  background: var(--yellow);
+  color: var(--text-yellow);
+}
+#verbal {
+  background: var(--green);
+  color: var(--text-green);
+}
+#visual {
+  background: var(--blue);
+  color: var(--text-blue);
+}
+
+/* From files: */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media screen and (max-width: 768px) {
+  #outer {
+    margin-top: 0px;
+    justify-content: center;
+    width: auto;
+    position: relative;
+    bottom: 10px;
+  }
+  #blue {
+    border-radius: 0px 0px 35px 35px;
+  }
+  .category {
+    font-size: large;
+  }
+  #your-score {
+    padding: 0px 36px;
+    margin-top: 20px;
+  }
+  #score {
+    font-size: 3em;
+    position: relative;
+    bottom: 25px;
+  }
+  #total {
+    font-size: 0.8em;
+    position: relative;
+    top: 5px;
+  }
+  h2.category {
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+  h3 {
+    position: relative;
+    bottom: 25px;
+    font-size: x-large;
+  }
+  #scoreboard {
+    margin-bottom: 30px;
+    font-size: medium;
+  }
+  button {
+    margin-top: 10px;
+  }
+}
