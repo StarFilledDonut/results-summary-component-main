@@ -32,18 +32,20 @@ html {
   font-family: "Hanken-Grotesk";
   color: var(--dark-blue);
 }
-main {
-  display: flex;
-  justify-content: center;
+body {
+  display: grid;
+  height: 100svh;
+  place-items: center;
+  align-content: center;
+  margin: 0px;
+  padding: 0px;
 }
 #outer {
   display: grid;
   grid-template-columns: repeat(auto-fit, 375px);
   width: 750px;
   border-radius: 25px;
-  box-shadow: 0px 10px 13px var(--pale-blue);
-  margin-top: 100px;
-  margin-bottom: 25px;
+  box-shadow: 10px 30px 30px var(--pale-blue);
 }
 #outer * {
   display: grid;
@@ -176,12 +178,15 @@ p {
   color: hsl(228, 45%, 44%);
 }
 @media screen and (max-width: 768px) {
+  body {
+    place-items: start center;
+    align-content: start;
+  }
+  footer {
+    margin-top: 2rem;
+  }
   #outer {
-    margin-top: 0px;
-    justify-content: center;
     width: auto;
-    position: relative;
-    bottom: 10px;
   }
   #blue {
     border-radius: 0px 0px 35px 35px;
